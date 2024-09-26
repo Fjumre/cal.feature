@@ -20,8 +20,8 @@ public class CalculatorControl {
         return sum;
     }
 
-    public int divideNumbers(ArrayList<Integer> numbers) {
-        int sum = numbers.get(0);
+    public double divideNumbers(ArrayList<Double> numbers) {
+        double sum = numbers.get(0);
 
         for (int i = 1; i < numbers.size(); i++) {
             sum /= numbers.get(i);
@@ -46,9 +46,9 @@ public class CalculatorControl {
         return dividend % divisor;
     }
 
-    public int procentages(ArrayList<Integer> procentNumbers) {
+    public double procentages(ArrayList<Double> procentNumbers) {
 
-         int product= multiplyNumbers(procentNumbers);
+         double product= divideNumbers(procentNumbers);
         return product*100;
     }
 }

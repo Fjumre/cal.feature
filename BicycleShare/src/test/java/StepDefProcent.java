@@ -9,12 +9,12 @@ import static org.junit.Assert.assertEquals;
 
 public class StepDefProcent {
 
-    ArrayList<Integer> procentNumbers= new ArrayList<>();
+    ArrayList<Double> procentNumbers= new ArrayList<>();
 
-    int result=0;
+    double result=0;
 
     @Given("I have the number {int} to find the procent")
-    public void iHaveTheNumberToFindTheProcent(int arg0) {
+    public void iHaveTheNumberToFindTheProcent(double arg0) {
         procentNumbers.add(arg0);
     }
 
@@ -28,7 +28,7 @@ public class StepDefProcent {
 
 
     @Then("I want to see the procent result {int} on my display")
-    public void iWantToSeeTheProcentResultOnMyDisplay(int arg0) {
-        assertEquals(result, arg0);
+    public void iWantToSeeTheProcentResultOnMyDisplay(double arg0) {
+        assertEquals(result, arg0, 0.0001);
     }
 }
